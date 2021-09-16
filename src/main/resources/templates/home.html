@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorator="layout/defaultLayout">
+
+
+<th:block layout:fragment="headBlock">
+    <title>테스트</title>
+    <!-- DataTables -->
+    <link rel="stylesheet" type="text/css" th:href="@{/libs/bootstrap/css/bootstrap.css}" />
+    <link rel="stylesheet" type="text/css" th:href="@{/libs/bootstrap/css/bootstrap-theme.css}" />
+    <!-- Responsive datatable examples -->
+</th:block>
+
+<th:block layout:fragment="mainContent">
+    <div class="row">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-body">
+                    <h1 th:text="${message}">Thymeleaf Template Sample</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</th:block>
+
+<th:block layout:fragment="endBlock">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script th:src="@{/libs/bootstrap/js/bootstrap.js}"></script>
+    <script th:src="@{/libs/bootstrap/js/npm.js}"></script>
+</th:block>
+</html>
