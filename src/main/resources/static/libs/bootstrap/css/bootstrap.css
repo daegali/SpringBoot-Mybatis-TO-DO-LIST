@@ -216,6 +216,14 @@ th {
   a[href^="javascript:"]:after {
     content: "";
   }
+  .card {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+  }
+
   pre,
   blockquote {
     border: 1px solid #999;
