@@ -71,10 +71,5 @@ public class UserController {
         return "user/login";
     }
 
-    //	메인화면
-    @RequestMapping(value = "/main", method = RequestMethod.GET)
-    public String main() {
-        return "main";
-    }
 
 }

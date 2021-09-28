@@ -8,38 +8,6 @@
     <link rel="stylesheet" type="text/css" th:href="@{/libs/bootstrap/css/bootstrap-theme.css}" />
     <!-- Responsive datatable examples -->
 </th:block>
-<script type="text/javascript">
-    $(function() {
-        $("#no-id-alert-danger").hide();
-        $("#id-alert-success").hide();
-        $("#id-alert-danger").hide();
-        $("#idCheck").click(function(){
-            $.ajax({
-                type: 'GET',
-                data: {
-                    "loginId": $("#loginId").val()},
-                url : "getUserById",
-                success : function(data) {
-                    console.log(data);
-                    var loginId = $("#loginId").val();
-                    if(!loginId || loginId.length<7 || loginId.length>14 ){
-                        $("#no-id-alert-danger").show();
-                        $("#id-alert-success").hide();
-                        $("#id-alert-danger").hide();
-                    }else if(data=='0') {
-                        $("#no-id-alert-danger").hide();
-                        $("#id-alert-success").show();
-                        $("#id-alert-danger").hide();
-                    } else if (data=="1") {
-                        $("#no-id-alert-danger").hide();
-                        $("#id-alert-success").hide();
-                        $("#id-alert-danger").show();
-                    }
-                }
-            })
-        })
-    });
-</script>
 <th:block layout:fragment="mainContent">
 
     <div class="container">
@@ -79,7 +47,6 @@
 <th:block layout:fragment="endBlock">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script th:src="@{/libs/bootstrap/js/bootstrap.js}"></script>
-    <script th:src="@{/libs/bootstrap/js/user.js}"></script>
     <script th:src="@{/libs/bootstrap/js/npm.js}"></script>
 </th:block>
 </html>
