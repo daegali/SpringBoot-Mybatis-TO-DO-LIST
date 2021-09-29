@@ -1,2 +1,2 @@
 # Spring Boot Bybatis
-Java, HTML, bootstrap
+Java, HTML,thymeleaf, bootstrap
