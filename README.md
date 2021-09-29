@@ -1,2 +1,2 @@
 # Spring Boot Bybatis
-Java, HTML, CSS, bootstrap
+Java, HTML, bootstrap
